@@ -31,7 +31,6 @@ func InitCodeSystem(basepath string, configFolder string, codesystemFile string)
 	log.Printf("Loaded %v code system key values", len(CodeSystem))
 	return nil
 }
-
 func GetCodeSystemVal(key string) string {
 	val, ok := CodeSystem[key]
 	if ok {
