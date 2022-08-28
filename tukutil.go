@@ -21,6 +21,7 @@ var (
 func SetCodeSystem(cs map[string]string) {
 	CodeSystem = cs
 }
+
 func InitCodeSystem(basepath string, configFolder string, codesystemFile string) error {
 	file, err := os.Open(basepath + "/" + configFolder + "/" + codesystemFile)
 	if err != nil {
