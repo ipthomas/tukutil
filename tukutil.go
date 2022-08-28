@@ -18,7 +18,10 @@ var (
 	CodeSystem = make(map[string]string)
 )
 
-func InitCodeSystem(basepath string, configFolder string, codesystemFile string) error {
+func SetCodeSystem(cs map[string]string) {
+	CodeSystem = cs
+}
+func LoadCodeSystem(basepath string, configFolder string, codesystemFile string) error {
 	file, err := os.Open(basepath + "/" + configFolder + "/" + codesystemFile)
 	if err != nil {
 		log.Println(err.Error())
