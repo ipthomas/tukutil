@@ -18,6 +18,17 @@ var (
 	CodeSystem = make(map[string]string)
 )
 
+func SplitXDWKey(xdwkey string) (string, string) {
+	var pwy string
+	var nhs string
+	if len(xdwkey) > 10 {
+		log.Println("Parsing XDWKey for Pathway and NHS ID")
+		pwy = xdwkey[:len(xdwkey)-10]
+		nhs = strings.TrimPrefix(xdwkey, pwy)
+	}
+	log.Printf("Pathway = %s NHS ID = %s", pwy, nhs)
+	return pwy, nhs
+}
 func SetCodeSystem(cs map[string]string) {
 	CodeSystem = cs
 }
