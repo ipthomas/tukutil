@@ -53,8 +53,8 @@ func SetCodeSystem(cs map[string]string) {
 }
 
 // InitCodeSystem loads the codesystem json file and sets the codesystem map from the json file values
-func InitCodeSystem(basepath string, configFolder string, codesystemFile string) error {
-	file, err := os.Open(basepath + "/" + configFolder + "/" + codesystemFile)
+func InitCodeSystem(codesystemFile string) error {
+	file, err := os.Open(codesystemFile)
 	if err != nil {
 		log.Println(err.Error())
 		return err
