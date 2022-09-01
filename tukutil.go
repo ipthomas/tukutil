@@ -28,7 +28,7 @@ func TemplateFuncMap() template.FuncMap {
 		"dtyear":     Tuk_Year,
 		"mappedid":   GetCodeSystemVal,
 		"prettytime": PrettyTime,
-		"newUuid":    NewUuid,
+		"newuuid":    NewUuid,
 		"newid":      Newid,
 		"tuktime":    Tuk_Time,
 	}
