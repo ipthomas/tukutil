@@ -39,7 +39,6 @@ func SplitXDWKey(xdwkey string) (string, string) {
 	var pwy string
 	var nhs string
 	if len(xdwkey) > 10 {
-		log.Println("Parsing XDWKey for Pathway and NHS ID")
 		pwy = xdwkey[:len(xdwkey)-10]
 		nhs = strings.TrimPrefix(xdwkey, pwy)
 	}
